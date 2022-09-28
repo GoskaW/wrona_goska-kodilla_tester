@@ -20,6 +20,6 @@ public class DebugExample {
     private static void subtractAndDisplay(int a, int b) {
         int results = a - b;
 
-        System.out.println(result);
+
     }
 }

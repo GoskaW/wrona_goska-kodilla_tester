@@ -6,7 +6,7 @@ public class Main {
         char carClass = 'A';
         boolean isGoodProgrammer = true;
         System.out.println(myAge);
-        String txt = "Hello from FirstClass!";
+        String txt = "Hello from com.kodilla.FirstClass!";
                 System.out.println(txt);
 
     }

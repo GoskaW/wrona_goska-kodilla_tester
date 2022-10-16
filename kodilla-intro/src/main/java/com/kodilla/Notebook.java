@@ -1,3 +1,5 @@
+package com.kodilla;
+
 public class Notebook {
     int weight;
     int price;
@@ -29,13 +31,16 @@ public class Notebook {
         }
     }
 
-    public void yearOfProduction() {
-        if (this.year < 2022) {
-            System.out.println("This notebook is young");
-        } else if (this.price < 1500 && this.year < 2010) {
-            System.out.println("This notebook is old and expensive.");
-        } else {
-            System.out.println("There is no hope for cheap and good electronic");
+    public void checkYear() {
+        if (this.year < 2010) {
+            if (this.price > 1000) {
+                System.out.println("This notebook is cheap and not that old.");
+            } else if (this.weight < 1600) {
+            } else if (this.year < 2000 ) {
+                System.out.println("This notebook is too old too heavy.");
+            } else {
+                System.out.println("There are cheaper and younger notebooks");
+            }
         }
     }
 }

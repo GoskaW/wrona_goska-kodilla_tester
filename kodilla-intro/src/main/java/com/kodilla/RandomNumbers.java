@@ -1,3 +1,5 @@
+package com.kodilla;
+
 import java.util.Random;
 
 import static javax.swing.UIManager.getInt;

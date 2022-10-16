@@ -4,7 +4,7 @@ public class SimpleArray {
     public static void main(String[] args) {
         String[] names= new String [5];
         names[0] = "Jerry";
-                names[1] = "John";
+        names[1] = "John";
         names[2] = "Clark";
         names[3] = "Edward";
         names[4] = "Jonathan";

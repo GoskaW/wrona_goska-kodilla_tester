@@ -16,5 +16,33 @@ public class Grades {
         this.grades[this.size] = value;
         this.size++;
     }
-}
-// totalnie nie mam pojęcia co dalej
+    public int lastGrade () {
+        return this.grades[this.size -1];
+            }
+            public double averageGrades() {
+        double sum = 0;
+        for (int i = 0; i < this.size; i++) {
+            sum = sum + this.grades [i];
+            }
+        return sum / this.size;
+            }
+     public static void main(String[] args) {
+    Grades grades = new Grades();
+    grades.add(3);
+    grades.add(4);
+    grades.add(5);
+    grades.add(2);
+    grades.add(4);
+    grades.add(3);
+    grades.add(4);
+    grades.add(4);
+    grades.add(3);
+    grades.add(2);
+
+    System.out.println(grades.lastGrade());
+    System.out.println(grades.averageGrades());
+
+    }
+    }
+
+

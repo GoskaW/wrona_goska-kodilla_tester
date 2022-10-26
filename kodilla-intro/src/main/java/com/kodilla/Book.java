@@ -4,20 +4,19 @@ public class Book {
     private String author;
     private String title;
 
-    String author ("Janina Bąk") {
-    return author;
+    public book (String author, String title) {
+        this.author = author;
+        this.title = title;
     }
-    String title("Statystycznie rzecz biorąc"){
-        return title;
+       public String book(String author, String title) {
+           return author + title;
+       }
+        Book book = new Book (){
+        Book book = book.of();
+        }
     }
-    public static void main(String[] args) {
-        Book book = new Book (); // nie bardzo wiem jak wywołać metodę of, bo gdy tworzę ją w podobny sposób jak Scanner, pojawia się bład
 
 
-    }
-
-
-}
 
 
 

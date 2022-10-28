@@ -14,7 +14,8 @@ public class Person {
         Manager manager = new Manager();
         manager.yourSalary();
         manager.yourResponsibilities();
-        System.out.println(manager.getResponsibilities());
+
+
 
         TeamLeader teamLeader = new TeamLeader();
         teamLeader.yourSalary();
@@ -25,6 +26,9 @@ public class Person {
         account.yourSalary();
         account.yourResponsibilities();
         System.out.println(account.getResponsibilities());
+
+    }
+    public void showResponsibilities(){
 
     }
 

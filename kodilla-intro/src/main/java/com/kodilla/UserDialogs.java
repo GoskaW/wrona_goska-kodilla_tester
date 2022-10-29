@@ -3,14 +3,37 @@ package com.kodilla;
 import java.util.Scanner;
 public class UserDialogs {
     public static String getUsername() {
-        Scanner scanner = new Scanner(System.in);                 // [1] klasa scanner wbudowana w jave
-        while (true) {                                            // [2]
-            System.out.println("Choose your color:");                // [3]
-            String name = scanner.nextLine().trim();               // [4] metoda pozwalająca na wpisanie danych + trim jako ścięcie spacji
-            if (name.length() >= 1) {                              // [5]
-                return name;                                        // [6]
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Enter your name: ");
+            String name = scanner.nextLine().trim();
+            if (name.length() >= 2) {
+                return name;
             }
-            System.out.println("Sorry, colour not found. Try again.");
+            System.out.println("Name is too short. Try again.");
         }
+    }
+
+    public static String getUserSelection() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Select calculation (A-add, S-subtract, D-divide, M-multiply):");
+            String calc = scanner.nextLine().trim().toUpperCase();
+            switch (calc) {
+                case "A": return "ADD";
+                case "S": return "SUB";
+                case "D": return "DIV";
+                case "M": return "MUL";
+                default:
+                    System.out.println("Wrong calculation. Try again.");
+            }
+        }
+    }
+
+    public static int getValue() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number:");
+        int val = scanner.nextInt();
+        return val;
     }
 }

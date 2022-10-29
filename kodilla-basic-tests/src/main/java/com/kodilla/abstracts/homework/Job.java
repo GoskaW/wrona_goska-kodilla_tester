@@ -8,6 +8,8 @@ public abstract class Job {
         this.salary = salary;
         this.responsibilities = responsibilities;
     }
+
+
     public int getSalary() {
         return salary;
     }

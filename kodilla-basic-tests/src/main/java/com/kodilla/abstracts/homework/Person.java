@@ -3,19 +3,19 @@ package com.kodilla.abstracts.homework;
 public class Person {
     public String firstName;
     public int age;
-    public static String responsibilities;
+    public String job;
 
     public Person(){
         this.firstName = firstName;
         this.age = age;
+        this.job =job;
     }
+
 
     public static void main(String[] args) {
         Manager manager = new Manager();
         manager.yourSalary();
         manager.yourResponsibilities();
-
-
 
         TeamLeader teamLeader = new TeamLeader();
         teamLeader.yourSalary();
@@ -28,9 +28,5 @@ public class Person {
         System.out.println(account.getResponsibilities());
 
     }
-    public void showResponsibilities(){
-
     }
-
-}
 

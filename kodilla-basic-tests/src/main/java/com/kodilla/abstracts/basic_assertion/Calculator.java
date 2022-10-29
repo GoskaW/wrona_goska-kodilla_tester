@@ -8,5 +8,8 @@ public class Calculator {
     public int subtract(int a, int b) {
         return a - b;
     }
+    static double power = Math.pow(4, 2); {
 
+
+    }
 }

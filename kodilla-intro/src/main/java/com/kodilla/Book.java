@@ -10,11 +10,10 @@ public class Book {
     }
 
 
-    static Book of() {
+    static Book of(String title, String author) {
         Book book = new Book("Janina Bąk", "Statystycznie rzecz biorąc.");
-        return;
-    }
-                // poprawiłam obiekt, ale nie wiem jak to wyciągnąć. Return nie zwraca, bo brakuje mu wartości. próbowałam getterami. Poddaje sie, pokaż mi proszę jak to powinno wyglądać.
+            return book;
+            }
 
 
 }

@@ -12,9 +12,8 @@ public class Book {
 
     static Book of(String author, String title) {
         Book book = new Book(author, title);
-        book = Book.of("Janina Bąk", "Statystycznie rzecz biorąc.");
         return book;
-    }
+    }                                               // czyli bez wywołania metody?
 
   }
 

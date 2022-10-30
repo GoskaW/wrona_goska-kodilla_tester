@@ -4,19 +4,19 @@ public class Book {
     private String author;
     private String title;
 
+
     public Book(String author, String title) {
         this.author = author;
         this.title = title;
     }
 
+    static Book of(String author, String title) {
+        Book book = new Book(author, title);
+        book = Book.of("Janina Bąk", "Statystycznie rzecz biorąc.");
+        return book;
+    }
 
-    static Book of(String title, String author) {
-        Book book = new Book("Janina Bąk", "Statystycznie rzecz biorąc.");
-            return book;
-            }
-
-
-}
+  }
 
 
                                 //

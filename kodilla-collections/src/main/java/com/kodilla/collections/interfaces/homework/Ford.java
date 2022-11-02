@@ -3,36 +3,32 @@ package com.kodilla.collections.interfaces.homework;
 public class Ford implements Car {
 
     private int speed;
+    private double accelerate;
+    private double brake;
 
-    public Ford(int speed) {
+    public Ford(int speed, double accelerate, double brake) {
         this.speed = speed;
+        this.accelerate = accelerate;
+        this.brake = brake;
     }
 
 
     @Override
     public int getSpeed() {
+        System.out.println("Ford ma prędkość ");
         return speed;
     }
 
 
     @Override
     public void increaseSpeed() {
-        int speed = 20;
-        for (int i = 0; i < speed; i++) ;
-        speed++;
-        speed += speed;
-
-        System.out.println("Zwiększa się o " + speed);
+        speed += accelerate;
     }
 
     @Override
     public void decreaseSpeed() {
-        int speed = this.speed - 20;
-        System.out.println(speed);
+        speed -= brake;
     }
-
-
-
 }
 
 

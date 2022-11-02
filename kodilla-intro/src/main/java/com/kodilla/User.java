@@ -9,10 +9,10 @@ public class User {
         this.age = age;
 
     }
+
     public int getAge() {
         return age;
     }
-
 
 
     public static void main(String[] args) {
@@ -27,12 +27,15 @@ public class User {
         for (int i = 0; i < users.length; i++) {
             result = result + users[i].age;
         }
+        int average = 0;
+        for (int i = 0; i < users.length; i++) {
+            average = ((int) result / users.length);
+        }
+
         System.out.println(result);
-
- }
-
-
+        System.out.println(average);
 
     }
+}
 
 

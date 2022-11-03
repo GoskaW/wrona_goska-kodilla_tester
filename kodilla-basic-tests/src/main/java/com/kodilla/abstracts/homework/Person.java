@@ -11,7 +11,7 @@ public class Person {
         this.job = job;
     }
 
-    public void showResponsilibities(Job job) {
+    public void showResponsilibities() {
 
         System.out.println(job.getResponsibilities());
     }

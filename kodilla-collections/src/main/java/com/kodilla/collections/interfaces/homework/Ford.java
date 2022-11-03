@@ -2,19 +2,17 @@ package com.kodilla.collections.interfaces.homework;
 
 public class Ford implements Car {
 
-    private int speed;
-    private double accelerate;
-    private double brake;
+    private double speed;
 
-    public Ford(int speed, double accelerate, double brake) {
+
+    public Ford(double speed) {
         this.speed = speed;
-        this.accelerate = accelerate;
-        this.brake = brake;
-    }
+        }
+
 
 
     @Override
-    public int getSpeed() {
+    public double getSpeed() {
         System.out.println("Ford ma prędkość ");
         return speed;
     }
@@ -22,12 +20,12 @@ public class Ford implements Car {
 
     @Override
     public void increaseSpeed() {
-        speed += accelerate;
+        speed += 20;
     }
 
     @Override
     public void decreaseSpeed() {
-        speed -= brake;
+        speed -= 21;
     }
 }
 

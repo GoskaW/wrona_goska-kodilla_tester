@@ -2,30 +2,28 @@ package com.kodilla.collections.interfaces.homework;
 
 public class Opel implements Car {
 
-    private int speed;
-    private double accelerate;
-    private double brake;
+    private double speed;
 
-    public Opel (int speed, double accelerate, double brake) {
+
+    public Opel (double speed) {
         this.speed = speed;
-        this.accelerate = accelerate;
-        this.brake = brake;
+
 
     }
     @Override
-    public int getSpeed() {
+    public double getSpeed() {
         System.out.println("Opel ma prędkość ");
         return speed;
     }
 
     @Override
     public void increaseSpeed() {
-        speed += accelerate;
+        speed += 50;
     }
 
     @Override
     public void decreaseSpeed() {
-        speed -= brake;
+        speed -= 35;
 
     }
 }

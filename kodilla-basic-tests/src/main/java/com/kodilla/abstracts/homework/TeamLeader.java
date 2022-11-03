@@ -1,18 +1,20 @@
 package com.kodilla.abstracts.homework;
 
-public class TeamLeader extends Job{
+public class TeamLeader extends Job {
 
     public TeamLeader() {
         super(3000, "organize");
     }
 
+
     @Override
-    public void yourSalary() {
-    return;
+    public double getSalary() {
+        return salary;
     }
 
     @Override
-    public void yourResponsibilities() {
-        return;
+    public String getResponsibilities() {
+        return responsibilities;
     }
+
 }

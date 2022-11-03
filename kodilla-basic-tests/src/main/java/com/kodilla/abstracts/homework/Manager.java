@@ -1,23 +1,20 @@
 package com.kodilla.abstracts.homework;
 
-public class Manager extends Job{
+public class Manager extends Job {
 
+        public Manager() {
 
-    public static String responsibilities;
-
-    public Manager() {
         super(3500, "managing");
     }
 
 
     @Override
-    public void yourSalary() {
-        return;
-
+    public double getSalary() {
+        return salary;
     }
 
     @Override
-    public void yourResponsibilities() {
-        return;
+    public String getResponsibilities() {
+        return responsibilities;
     }
 }

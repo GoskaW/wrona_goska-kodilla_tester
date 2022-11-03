@@ -3,16 +3,19 @@ package com.kodilla.abstracts.homework;
 public class Account extends Job{
 
     public Account() {
+
         super(2000, "selling");
     }
 
+
     @Override
-    public void yourSalary() {
-        return;
+    public double getSalary() {
+        return salary;
     }
 
     @Override
-    public void yourResponsibilities() {
-    return;
+    public String getResponsibilities() {
+        return responsibilities;
     }
+
 }

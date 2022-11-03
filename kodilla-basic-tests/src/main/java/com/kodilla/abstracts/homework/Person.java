@@ -1,35 +1,35 @@
 package com.kodilla.abstracts.homework;
 
 public class Person {
-    public String firstName;
-    public int age;
-    public String job;
+    String firstName;
+    int age;
+    String job;
 
-    public Person(){
+    public Person(String firstName, int age, String job) {
         this.firstName = firstName;
         this.age = age;
-        this.job =job;
+        this.job = job;
     }
 
+    public void showResponsilibities(Job job) {
+        System.out.println(job.getResponsibilities());
+    }
 
     public static void main(String[] args) {
         Manager manager = new Manager();
-        manager.yourSalary();
-        manager.yourResponsibilities();
+        manager.getSalary();
+        manager.getResponsibilities();
+        System.out.println(manager.getResponsibilities());
 
         TeamLeader teamLeader = new TeamLeader();
-        teamLeader.yourSalary();
-        teamLeader.yourResponsibilities();
+        teamLeader.getSalary();
+        teamLeader.getResponsibilities();
         System.out.println(teamLeader.getResponsibilities());
 
         Account account = new Account();
-        account.yourSalary();
-        account.yourResponsibilities();
+        account.getSalary();
+        account.getResponsibilities();
         System.out.println(account.getResponsibilities());
-    }
-        public void showReponsibilities() {
-            System.out.println(Manager.responsibilities);
-        }
 
     }
-
+}

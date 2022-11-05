@@ -25,6 +25,7 @@ public class Dictionary {
         return result;
             }
     public int size() {
+
         return dictionary.size();
     }
 }

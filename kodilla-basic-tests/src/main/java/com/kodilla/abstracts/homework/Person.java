@@ -12,7 +12,7 @@ public class Person {
     }
 
     public void showResponsilibities() {
-
+                                                                /// metoda wyciągająca obiekt z innej klasy
         System.out.println(job.getResponsibilities());
     }
 

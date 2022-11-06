@@ -11,6 +11,7 @@ public class FlightRepository {
         flightsTable.add(new Flight("Kraków","Londyn"));
         flightsTable.add(new Flight("Katowice","Nicea"));
         flightsTable.add(new Flight("Nicea","Katowice"));
+        flightsTable.add(new Flight("Boston", "NYC"));
 
         return flightsTable;
 

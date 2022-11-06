@@ -11,13 +11,13 @@ class FlightFinderTestSuite {
     @Test
     void findFlightsFrom() {
         List<Flight> result = FlightFinder.findFlightsFrom("Warszawa");
-        assertEquals(FlightRepository.getFlightsTable(), result);
+        assertEquals(5,result.size());
     }
-                                                                        // nie jestem przekonana, co do skuteczności testów. Mam wrażenie, że czegoś tu brakuje.
+
     @Test
     void findFlightsTo() {
         List<Flight> result = FlightFinder.findFlightsTo("Kraków");
-        assertEquals(FlightRepository.getFlightsTable(), result);
+        assertEquals(5, result.size());
 
     }
 }

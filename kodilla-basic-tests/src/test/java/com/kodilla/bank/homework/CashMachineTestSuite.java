@@ -83,6 +83,17 @@ class CashMachineTestSuite {
         assertEquals(2,cashMachine.getAmountOfPayment());
     }
 
+    @Test
+
+    public void shouldCheckAverage() {
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.add(-200);
+        cashMachine.add(500);
+        cashMachine.add(100);
+
+        assertEquals(133,cashMachine.getAverage());
+    }
+
 
 
 }

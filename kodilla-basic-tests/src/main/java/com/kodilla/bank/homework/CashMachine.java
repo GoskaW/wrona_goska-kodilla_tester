@@ -70,6 +70,9 @@ public class CashMachine {
         }
         return amountOfPayment;
     }
+
+
+
 }
 
 

@@ -18,6 +18,7 @@ public class Grades {
     }
 
     public int[] getValues() {
+
         return values;
     }
 

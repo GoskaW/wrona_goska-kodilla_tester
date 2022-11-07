@@ -8,7 +8,7 @@ public class Bank {
         this.size = 0;
     }
 
-    public int getAllBalance() {                                    //całkowity bilans
+    public int getAllBalance() {
         int allBalance = 0;
         for (int i = 0; i < cashMachines.length; i++) {
             CashMachine cashMachine = cashMachines[i];
@@ -17,7 +17,7 @@ public class Bank {
         return allBalance;
     }
 
-    public int getAllSumOfWithdrawls() {                            //wszystkie wypłaty
+    public int getAllSumOfWithdrawls() {
         int allSumOfWithdrawals = 0;
         for (int i = 0; i < cashMachines.length; i++) {
             allSumOfWithdrawals += cashMachines[i].getSumOfWithdrawls();
@@ -25,7 +25,7 @@ public class Bank {
         return -allSumOfWithdrawals;
     }
 
-    public int getAllSumOfPayment() {                           //wpłaty total
+    public int getAllSumOfPayment() {
         int allSumOfPayment = 0;
         for (int i = 0; i < cashMachines.length; i++) {
             allSumOfPayment += cashMachines[i].getSumOfPayment();
@@ -34,8 +34,8 @@ public class Bank {
     }
 
     public double getAllPaymentAverage(){
-        int counterPayment = getAllSumOfPayment();   // zmodyfikowałam metodę z klasy Grades, ale nie wiem czy zrobiłam to dobrze.
-        if (counterPayment == 0); {                 // i tu się zacięłam, przetestowałam metodę, ale wyskoczył mi błąd unreachable statment double sum = 0;
+        int counterPayment = getAllSumOfPayment();
+        if (counterPayment == 0) {
             return 0;
         }
         double sum = 0;
@@ -44,6 +44,18 @@ public class Bank {
         }
         return sum / counterPayment;
 
+    }
+
+    public double getAllWithdwarlAverage() {
+        int counterWithdwarl = getAllSumOfWithdrawls();
+        if (counterWithdwarl == 0) {
+            return 0;
+        }
+        double sum = 0;
+        for (int i = 0; i < this.cashMachines.length; i++) {
+            sum += cashMachines[i].getSumOfWithdrawls();
+        }
+        return sum/counterWithdwarl;
     }
 
 

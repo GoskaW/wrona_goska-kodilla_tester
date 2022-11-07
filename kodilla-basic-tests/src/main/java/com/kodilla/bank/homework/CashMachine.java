@@ -18,6 +18,7 @@ public class CashMachine {
     }
 
     public int[] getTransactions() {
+
         return transactions;
     }
 

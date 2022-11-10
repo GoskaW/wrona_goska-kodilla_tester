@@ -13,8 +13,8 @@ class FlightFinderTestSuite {
     void findFlightsFrom() {
        List<Flight> result = FlightFinder.findFlightsFrom("Warszawa");
        List<Flight> expected = new ArrayList<>();
-       expected.add(new Flight("Warszawa", "Londyn"));
-       assertEquals(expected, expected);
+       expected.add(new Flight("Warszawa","Londyn"));
+       assertEquals("Warszawa", expected);
 
     }
 

@@ -12,7 +12,7 @@ public class Application {
         students.add(new Student("Weronika Podsiadło", new Teacher(null)));
 
 
-        for (Student student : students) {
+        for (Student student : students) {          // czy w tej pętli mogę użyć strumienia? np
 
             }
 

@@ -4,16 +4,19 @@ import org.junit.jupiter.api.Test;
 
 class BankTestSuite {
 
+
+
     @Test
-    void getAllBalance() {
+    void shouldGetAllBalance() {
+
     }
 
     @Test
-    void getAllSumOfWithdrawls() {
+    void shouldGetAllSumOfWithdrawls() {
     }
 
     @Test
-    void getAllSumOfPayment() {
+    void ShouldGetAllSumOfPayment() {
     }
 
 

@@ -13,15 +13,19 @@ public class Warehouse {
         orderList.add(order);
     }
 
-    public Order getOrder(String number) {
+    public Order getOrder(String number) throws OrderDoesntExistException {
         List<Order> checkOrder = orderList
                 .stream()
                 .filter(order -> order.getNumber().equals(number))
                 .collect(Collectors.toList());
 
-        return checkOrder;
+        if (checkOrder.isEmpty())
+            return checkOrder.get(0);
+            throw new OrderDoesntExistException();
+
+        }
     }
-}
+
 
 
 

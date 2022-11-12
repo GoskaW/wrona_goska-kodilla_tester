@@ -26,7 +26,7 @@ public class Application {
 
             }
                                                                                             // coś tu poszło nie tak.
-                                                                                                // potrzebuję metody, która będzie zwracać
+                                                                                                // potrzebuje metody, która będzie zwracać nauczyciela?
 
         }
 

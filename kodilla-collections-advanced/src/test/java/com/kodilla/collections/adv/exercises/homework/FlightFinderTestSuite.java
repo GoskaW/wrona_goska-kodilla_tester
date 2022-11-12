@@ -26,7 +26,7 @@ class FlightFinderTestSuite {
     void checkIfFlightFromExist () {
          List<Flight> expected = new ArrayList<>();
         List<Flight> result = FlightFinder.findFlightsFrom("Warszawa");
-        assertEquals(FlightRepository.getFlightsTable(), result);
+        assertEquals(FlightFinder.findFlightsFrom("Warszawa"), result);
             }
+        }
 
-            }

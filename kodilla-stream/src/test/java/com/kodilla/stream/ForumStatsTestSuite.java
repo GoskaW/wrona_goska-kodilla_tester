@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ForumStatsTestSuite {
 
     @Test
-    public void testAverageOver40 () {
+     void testAverageOver40 () {
         List<User> users = new ArrayList<>();
         users.add(new User("Walter White", 25, 7, "Chemists"));
         users.add(new User("Jessie Pinkman", 25, 4648, "Sales"));
@@ -21,7 +21,7 @@ public class ForumStatsTestSuite {
         assertEquals(58, ForumStats.averageOfPostsOver40(users) );
     }
     @Test
-    public void testAverageUnder40 () {
+    void testAverageUnder40 () {
         List<User> users = new ArrayList<>();
         users.add(new User("Walter White", 25, 7, "Chemists"));
         users.add(new User("Jessie Pinkman", 25, 4648, "Sales"));

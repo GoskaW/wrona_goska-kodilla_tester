@@ -25,7 +25,8 @@ public class Application {
             }
 
             }
-                                                                                            // coś tu poszło nie tak
+                                                                                            // coś tu poszło nie tak.
+                                                                                                // potrzebuję metody, która będzie zwracać
 
         }
 

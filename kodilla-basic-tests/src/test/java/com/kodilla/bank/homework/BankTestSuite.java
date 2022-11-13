@@ -2,23 +2,22 @@ package com.kodilla.bank.homework;
 
 import org.junit.jupiter.api.Test;
 
-class BankTestSuite {
-
-
+public class BankTestSuite {
 
     @Test
-    void shouldGetAllBalance() {
-
+    public void shouldCheckAllBalance(){
+        Bank bank = new Bank();
+        CashMachine lubicz = new CashMachine();
+        CashMachine rynek = new CashMachine();
+        CashMachine slawkowska = new CashMachine();
+        bank.add(lubicz);
+        bank.add(rynek);
+        bank.add(slawkowska);
+        lubicz.add(350);
+        rynek.add(250);
+        slawkowska.add(-150);
     }
-
-    @Test
-    void shouldGetAllSumOfWithdrawls() {
-    }
-
-    @Test
-    void ShouldGetAllSumOfPayment() {
-    }
-
-
-
 }
+
+
+

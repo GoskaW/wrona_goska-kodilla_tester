@@ -3,9 +3,17 @@ public class Bank {
     private CashMachine[] cashMachines;
     private int size;
 
-    public Bank(CashMachine[] cashMachines, int size) {
-        this.cashMachines = cashMachines;
+
+    public Bank() {
+        this.cashMachines = new CashMachine[0];
         this.size = 0;
+    }
+    public void add(CashMachine cashMachine){
+        this.size++;
+        CashMachine[] newTab = new CashMachine[this.size];
+        System.arraycopy(cashMachines, 0, newTab, 0, cashMachines.length);
+        newTab[this.size - 1] = cashMachine;
+        this.cashMachines = newTab;
     }
 
     public int getAllBalance() {

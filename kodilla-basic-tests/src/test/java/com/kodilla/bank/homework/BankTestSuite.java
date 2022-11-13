@@ -32,6 +32,7 @@ public class BankTestSuite {
         bank.add(lubicz);
         bank.add(rynek);
         bank.add(slawkowska);
+
         lubicz.add(350);
         rynek.add(-250);
         slawkowska.add(-150);
@@ -49,6 +50,7 @@ public class BankTestSuite {
         bank.add(lubicz);
         bank.add(rynek);
         bank.add(slawkowska);
+
         lubicz.add(350);
         rynek.add(250);
         slawkowska.add(-150);
@@ -65,6 +67,7 @@ public class BankTestSuite {
             bank.add(lubicz);
             bank.add(rynek);
             bank.add(slawkowska);
+
             lubicz.add(350);
             rynek.add(250);
             slawkowska.add(-150);
@@ -81,6 +84,7 @@ public class BankTestSuite {
             bank.add(lubicz);
             bank.add(rynek);
             bank.add(slawkowska);
+
             lubicz.add(350);
             rynek.add(250);
             slawkowska.add(-150);

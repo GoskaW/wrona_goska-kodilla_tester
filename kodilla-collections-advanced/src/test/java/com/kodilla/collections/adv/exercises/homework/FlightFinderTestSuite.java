@@ -12,14 +12,14 @@ class FlightFinderTestSuite {
     @Test
     void findFlightsFrom() {
        List<Flight> result = FlightFinder.findFlightsFrom("Londyn");
-       assertEquals(FlightRepository.getFlightsTable(), result);
+       assertEquals(FlightFinder.findFlightsFrom("Londyn"), result);
 
     }
 
     @Test
     void findFlightsTo() {
         List<Flight> result = FlightFinder.findFlightsTo("Kraków");
-        assertEquals(FlightRepository.getFlightsTable(), result);
+        assertEquals(FlightFinder.findFlightsTo("Kraków"), result);
 
     }
     @Test

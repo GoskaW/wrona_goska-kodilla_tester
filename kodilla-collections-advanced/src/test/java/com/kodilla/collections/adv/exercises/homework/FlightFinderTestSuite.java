@@ -27,6 +27,7 @@ class FlightFinderTestSuite {
 
         List<Flight> expected = new ArrayList<>();
         expected.add(new Flight("Katowice", "Kraków"));
+
         assertEquals(FlightFinder.findFlightsTo("kraków"), result);
 
     }
@@ -34,6 +35,18 @@ class FlightFinderTestSuite {
 
     @Test
     public void checkIfFlightFromExist() {
+        FlightFinder flightFinder = new FlightFinder();
+        flightFinder.findFlightsFrom("Warszawa");
+        flightFinder.findFlightsFrom("Katowice");
+
+
+        List<Flight> result = flightFinder.findFlightsFrom("Warszawa");
+        List<Flight> expected = new ArrayList<>();
+        expected.add(new Flight("Warszawa", "Kraków"));
+        assertEquals(FlightFinder.findFlightsFrom("Warszawa"),result);
+
+
+
 
 
     }

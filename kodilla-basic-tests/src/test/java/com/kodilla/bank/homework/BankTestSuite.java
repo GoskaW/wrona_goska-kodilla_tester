@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankTestSuite {
 
+
+
     @Test
     public void shouldCheckAllBalance(){
         Bank bank = new Bank();

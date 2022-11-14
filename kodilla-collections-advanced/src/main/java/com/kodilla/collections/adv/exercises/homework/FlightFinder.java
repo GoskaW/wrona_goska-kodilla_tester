@@ -6,6 +6,8 @@ import java.util.List;
 
 public class FlightFinder {
 
+
+
     public static List<Flight> findFlightsFrom(String departure) {
         List<Flight> resultDeparture = new ArrayList<>();
         for (Flight flight : FlightRepository.getFlightsTable()) {
@@ -29,6 +31,10 @@ public class FlightFinder {
 
 
 
+        }
 
-}
+
+
+
+
 

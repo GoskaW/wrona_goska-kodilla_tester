@@ -11,12 +11,21 @@ public class Flight {
             this.arrival = arrival;
         }
 
+
     public String getDeparture() {
         return departure;
     }
 
     public String getArrival() {
         return arrival;
+    }
+
+    public String addFlightTo(String arrival){
+        return arrival;
+
+    }
+    public String addFlightFrom(String departure) {
+            return departure;
     }
 
     @Override

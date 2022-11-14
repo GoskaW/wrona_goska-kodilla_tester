@@ -11,22 +11,31 @@ class FlightFinderTestSuite {
 
     @Test
     void findFlightsFrom() {
-       List<Flight> result = FlightFinder.findFlightsFrom("Londyn");
-       assertEquals(FlightFinder.findFlightsFrom("Londyn"), result);
+        List<Flight> result = FlightFinder.findFlightsFrom("Londyn");
+        assertEquals(FlightFinder.findFlightsFrom("Londyn"), result);
 
     }
 
     @Test
     void findFlightsTo() {
+        Flight flight = new Flight("", "");
+        flight.addFlightTo("Kraków");
+        flight.addFlightTo("Katowice");
+        flight.addFlightTo("Londyn");
+
         List<Flight> result = FlightFinder.findFlightsTo("Kraków");
-        assertEquals(FlightFinder.findFlightsTo("Kraków"), result);
+
+        List<Flight> expected = new ArrayList<>();
+        expected.add(new Flight("Katowice", "Kraków"));
+        assertEquals(FlightFinder.findFlightsTo("kraków"), result);
 
     }
+
+
     @Test
-    void checkIfFlightFromExist () {
-         List<Flight> expected = new ArrayList<>();
-        List<Flight> result = FlightFinder.findFlightsFrom("Warszawa");
-        assertEquals(FlightFinder.findFlightsFrom("Warszawa"), result);
-            }
-        }
+    public void checkIfFlightFromExist() {
+
+
+    }
+}
 

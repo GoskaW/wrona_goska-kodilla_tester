@@ -9,6 +9,19 @@ public class WarehouseApp {
         warehouse.addOrder(new Order("14fv1"));
         warehouse.addOrder(new Order("236dc"));
 
+        try {
+            Order isOrderExist = warehouse.getOrder("11");
+            System.out.println("Order exist");
+        } catch (OrderDoesntExistException e) {
+            System.out.println("Order doesn't exist. Try again");
+        } finally {
+            System.out.println("Thank you. See you soon");
+
+        }
+        }
+
 
     }
-}
+
+
+

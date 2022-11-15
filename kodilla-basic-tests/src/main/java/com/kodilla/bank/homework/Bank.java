@@ -16,6 +16,7 @@ public class Bank {
         this.cashMachines = newTab;
     }
 
+
     public int getAllBalance() {
         int allBalance = 0;
         for (int i = 0; i < cashMachines.length; i++) {

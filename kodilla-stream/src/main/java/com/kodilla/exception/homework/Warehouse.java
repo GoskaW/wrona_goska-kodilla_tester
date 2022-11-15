@@ -11,21 +11,16 @@ public class Warehouse {
     public void addOrder(Order order) {
         orderList.add(order);
     }
-
     public Order getOrder(String number) throws OrderDoesntExistException {
-        List<Order> checkOrder = orderList
+        return orderList
+
                 .stream()
                 .filter(order -> order.getNumber().equals(number))
-                .toList();
+                .findAny()
+                .orElseThrow(OrderDoesntExistException::new);               // w ten sposób?
 
-            for (Order order : orderList) {
-                if (order.getNumber().equals(number));
-                return order;
-            }
-            throw new OrderDoesntExistException();
+    }
 
-
-        }
     }
 
 

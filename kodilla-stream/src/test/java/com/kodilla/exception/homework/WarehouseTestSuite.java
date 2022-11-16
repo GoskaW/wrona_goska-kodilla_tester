@@ -19,9 +19,9 @@ class WarehouseTestSuite {
         Warehouse warehouse = new Warehouse();
         warehouse.addOrder(new Order("2523"));
 
-        Order expected = warehouse.getOrder("5124");
+        Order expected = warehouse.getOrder("5236");
 
-        Order expected2 = warehouse.getOrder("5124");
+        Order expected2 = warehouse.getOrder("524");
         assertNotNull(expected);
                                                                     // Test failed, dlatego, że tak miało być, czy że metoda getOrder jest źle napisana?
 

@@ -17,13 +17,13 @@ class WarehouseTestSuite {
 @Test
     public void TestGetOrder() throws OrderDoesntExistException {
         Warehouse warehouse = new Warehouse();
-        warehouse.addOrder(new Order("2523"));
+        warehouse.addOrder(new Order("5236"));
 
         Order expected = warehouse.getOrder("5236");
 
-        Order expected2 = warehouse.getOrder("524");
+        Order expected2 = warehouse.getOrder("5236");
         assertNotNull(expected);
-                                                                    // Test failed, dlatego, że tak miało być, czy że metoda getOrder jest źle napisana?
+                                                                    // given, then, when muszą mieć ten sam numer zamówienia, inaczej test nie przejdzie.
 
 
 

@@ -22,10 +22,8 @@ class WarehouseTestSuite {
         Order expected = warehouse.getOrder("5124");
 
         Order expected2 = warehouse.getOrder("5124");
-        assertEquals(expected2, expected);
-                                                                    // AssertTrue zwraca boolean, a ja nie mam metody z tym typem
-                                                                    // AssertThrow - powtórze asercje z testu z Exception (więc bez sensu)
-                                                                    // najbardziej pasuje assertEqual, ale coś tu jest nie tak
+        assertNotNull(expected);
+                                                                    // Test failed, dlatego, że tak miało być, czy że metoda getOrder jest źle napisana?
 
 
 

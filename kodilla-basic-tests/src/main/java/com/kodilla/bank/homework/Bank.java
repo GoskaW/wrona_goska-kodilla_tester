@@ -52,9 +52,9 @@ public class Bank {
         }
         double sum = 0;
         for (int i = 0; i < this.cashMachines.length; i++) {
-            sum += cashMachines[i].getSumOfPayment();
+            sum += cashMachines[i].getAmountOfPayment();
         }
-        return sum / getNumberOfCashMachines();
+        return sum / counterPayment;
 
     }
 
@@ -67,7 +67,7 @@ public class Bank {
         for (int i = 0; i < this.cashMachines.length; i++) {
             sum += cashMachines[i].getAmountOfWithdrawals();
         }
-        return sum/getNumberOfCashMachines();
+        return sum/counterWithdwarl;
     }
 
 

@@ -74,7 +74,7 @@ public class BankTestSuite {
             rynek.add(250);
             slawkowska.add(-150);
 
-            assertEquals(1,bank.getAllPaymentAverage());
+            assertEquals(300,bank.getAllPaymentAverage());
         }
 
         @Test
@@ -91,7 +91,7 @@ public class BankTestSuite {
             rynek.add(250);
             slawkowska.add(-150);
 
-            assertEquals(-1, bank.getAllWithdwarlAverage());
+            assertEquals(-150, bank.getAllWithdwarlAverage());
 
         }
 

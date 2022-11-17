@@ -22,6 +22,7 @@ public class CashMachine {
         return transactions;
     }
 
+
     public int getBalance() {
         if (this.transactions.length == 0) {
             return 0;

@@ -17,7 +17,7 @@ public class Warehouse {
                 .stream()
                 .filter(order -> order.getNumber().equals(number))
                 .findAny()
-                .orElseThrow(OrderDoesntExistException::new);               // w ten sposób?
+                .orElseThrow(OrderDoesntExistException::new);               // w ten sposób?   metod referencje
 
     }
 

@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Order {
 
-    private double value;
-    private LocalDate orderDate;
+    private static double value;
+    private static LocalDate orderDate;
     private String login;
 
     public Order(double value, LocalDate orderDate, String login) {
@@ -15,11 +15,11 @@ public class Order {
         this.login = login;
     }
 
-    public double getValue() {
+    public static double getValue() {
         return value;
     }
 
-    public LocalDate getOrderDate() {
+    public static LocalDate getOrderDate() {
         return orderDate;
     }
 

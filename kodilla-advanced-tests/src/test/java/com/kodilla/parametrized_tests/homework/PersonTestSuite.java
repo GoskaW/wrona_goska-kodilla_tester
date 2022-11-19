@@ -11,6 +11,6 @@ public class PersonTestSuite {
     @ParameterizedTest
     @MethodSource( value = "com.kodilla.parametrized_tests.homework.PersonSources#provideDataForBMI")
     public void shouldReturnCorrectBMI(Person input, String excepted) {
-        assertEquals(excepted, Person.getBMI(input));
+        assertEquals(excepted, input.getBMI());
     }
 }

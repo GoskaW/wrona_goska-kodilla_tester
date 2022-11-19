@@ -8,7 +8,7 @@ public class PersonSources {
 
     private static Stream<Arguments> provideDataForBMI(){
         return Stream.of(
-                Arguments.of(new Person (150,45),"Underweight"),
+                Arguments.of(new Person (150,35),"Underweight"),
                 Arguments.of(new Person (155, 55), "Normal (healthy weight)"),
                 Arguments.of(new Person(168,68), "Normal (healthy weight)"),
                 Arguments.of(new Person (170, 75), "Normal (healthy weight)"),

@@ -1,0 +1,39 @@
+package com.kodilla.execution_model.homework;
+
+import java.time.LocalDate;
+
+public class Order {
+
+    private double value;
+    private LocalDate orderDate;
+    private String login;
+
+    public Order(double value, LocalDate orderDate, String login) {
+        this.value = value;
+        this.orderDate = orderDate;
+        this.login = login;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public LocalDate getOrderDate() {
+        return orderDate;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "value=" + value +
+                ", orderDate=" + orderDate +
+                ", login='" + login + '\'' +
+                '}';
+    }
+}
+

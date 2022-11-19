@@ -1,5 +1,6 @@
 package com.kodilla.parametrized_tests;
 
+
 public class StringManipulator {
 
     public String reverseWithLowerCase(String input) {
@@ -11,8 +12,11 @@ public class StringManipulator {
         String value = input.replaceAll(" ", "");
         return value.length();
     }
+
     public int countNumberOfCommas(String text) {
         int count = text.length() - text.replace(",", "").length();
         return count;
     }
+
+
 }

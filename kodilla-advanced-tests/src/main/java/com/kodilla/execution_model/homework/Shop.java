@@ -1,17 +1,18 @@
 package com.kodilla.execution_model.homework;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Shop {
 
-    private List<Order> orderList = new ArrayList<>();
+   Set<Order> orderSet = new HashSet<>();
 
     public void addOrder(Order order){
-        this.orderList.add(order);
+        this.orderSet.add(order);
     }
 
+
     public int getSize(){
-        return this.orderList.size();
+        return this.orderSet.size();
     }
 }

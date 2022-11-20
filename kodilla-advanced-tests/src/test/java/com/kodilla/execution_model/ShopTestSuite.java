@@ -57,11 +57,11 @@ public class ShopTestSuite {
            public void checkLogin() {
                String login = order1.getLogin();
 
-               assertTrue(login.matches("nn222"));
-               assertFalse(login.matches("B [0-8]"));
-               assertFalse(login.matches("J(.*)"));
-               assertFalse(login.matches("J(.?)v[a-z] (.*)"));
+               assertTrue(login.contains("nn222"));
 
+
+                                                                                // wahałam się pomiędzy String indexOf a String contains,
+                                                                                // ale w tej pierwszej metodzie Stringa wychodził mi kosmos
 
 
 

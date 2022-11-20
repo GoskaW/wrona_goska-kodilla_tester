@@ -42,15 +42,11 @@ public class Shop {
             }
             return result2;
     }
-
-
-
-
     public int getSize(){
       return this.orderSet.size();
     }
 
-    public static double getSumOfAllOrder(){
+    public double getSumOfAllOrder(){
         return orderSet
                 .stream()
                 .map(Order::getValue)

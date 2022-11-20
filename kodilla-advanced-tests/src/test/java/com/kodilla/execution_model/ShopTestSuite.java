@@ -49,7 +49,7 @@ public class ShopTestSuite {
            @Test
            public void checkSumValueOfOrder() {
                shop.getSumOfAllOrder();
-               assertEquals(1645, Shop.getSumOfAllOrder());
+               assertEquals(1645, shop.getSumOfAllOrder());
 
            }
 
@@ -62,8 +62,7 @@ public class ShopTestSuite {
                assertTrue(login2.contains("dwse3"));
 
 
-                                                                                // wahałam się pomiędzy String indexOf a String contains,
-                                                                                // ale w tej pierwszej metodzie Stringa wychodził mi kosmos
+
 
 
 

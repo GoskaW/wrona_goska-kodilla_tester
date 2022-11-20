@@ -1,46 +1,62 @@
 package com.kodilla.execution_model.homework;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Shop {
 
-  List<Order> orderList = new ArrayList<>();
+  static Set<Order> orderSet = new HashSet<>();
 
     public void addOrder(Order order){
 
-      orderList.add(order);
-    }
-    public List<Order> getOrderByDate(LocalDate fromDate, LocalDate toDate) {
-        return orderList
-                .stream()
-                .filter(order-> Order.getOrderDate().isBefore(fromDate))
-                .filter(order-> Order.getOrderDate().isAfter(toDate))
-                .collect(Collectors.toList());
-
+      this.orderSet.add(order);
     }
 
-    public List<Order> getOrderByValue (double minValue, double maxValue) {
-        return orderList
-                .stream()
-                .filter(order-> Order.getValue() <= minValue)
-                .filter(order -> Order.getValue() >= maxValue)
-                .collect(Collectors.toList());
+    public Order getOrder(int index) {
+        return orderSet
+        .stream()
+                .filter(o -> o.equals(orderSet))
+                .collect(Collectors.toSet())
+                .iterator()
+                .next();
 
     }
+    public Set<Order> getOrderByDate(LocalDate from, LocalDate to) {
+        Set<Order> result = new HashSet<>();
+        for (Order order : orderSet) {
+            if (order.getOrderDate().isAfter(from) && order.getOrderDate().isBefore(to)) {
+                result.add(order);
+            }
+        }
+            return result;
+        }
+
+    public Set<Order> getOrderByValue(double minValue, double maxValue) {
+            Set<Order> result2 = new HashSet<>();
+            for (Order order : orderSet){
+                if(order.getValue() >= minValue && order.getValue() <= maxValue){
+                    result2.add(order);
+                }
+            }
+            return result2;
+    }
+
+
+
 
     public int getSize(){
-
-      return orderList.size();
+      return this.orderSet.size();
     }
 
-    public double getSumOfAllOrder(){
-        double sumOfOrder = 0;
-        for (Order order : orderList) {
-            sumOfOrder += Order.getValue();
-            }
-        return sumOfOrder;
+    public static double getSumOfAllOrder(){
+        return orderSet
+                .stream()
+                .map(Order::getValue)
+                .mapToDouble(Double::doubleValue)
+                .sum();
     }
-}
+    }
+
+

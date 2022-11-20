@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Order {
 
-    private static double value;
-    private static LocalDate orderDate;
+    private double value;
+    private LocalDate orderDate;
     private String login;
 
     public Order(double value, LocalDate orderDate, String login) {
@@ -15,18 +15,31 @@ public class Order {
         this.login = login;
     }
 
-    public static double getValue() {
-        return value;
+    public double getValue() {
+         return value;
     }
 
-    public static LocalDate getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
     public String getLogin() {
         return login;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Order order = (Order) o;
+        return Double.compare(order.value, value) == 0 &&
+                Objects.equals(orderDate, order.orderDate) &&
+                Objects.equals(login, order.login);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(value, orderDate, login);
+    }
 
     @Override
     public String toString() {
@@ -37,17 +50,7 @@ public class Order {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Order order = (Order) o;
-        return Double.compare(order.value, value) == 0 && Objects.equals(orderDate, order.orderDate) && Objects.equals(login, order.login);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(value, orderDate, login);
-    }
 }
+
 

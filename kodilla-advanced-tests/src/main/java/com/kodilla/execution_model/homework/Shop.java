@@ -1,42 +1,44 @@
 package com.kodilla.execution_model.homework;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Shop {
 
-   Set<Order> orderSet = new HashSet<>();
+  List<Order> orderList = new ArrayList<>();
 
     public void addOrder(Order order){
-        orderSet.add(order);
+
+      orderList.add(order);
     }
-    public Set<Order> getOrderByDate(LocalDate fromDate, LocalDate toDate) {
-        return orderSet
+    public List<Order> getOrderByDate(LocalDate fromDate, LocalDate toDate) {
+        return orderList
                 .stream()
                 .filter(order-> Order.getOrderDate().isBefore(fromDate))
                 .filter(order-> Order.getOrderDate().isAfter(toDate))
-                .collect(Collectors.toSet());
+                .collect(Collectors.toList());
 
     }
 
-    public Set<Order> getOrderByValue (double minValue, double maxValue) {
-        return orderSet
+    public List<Order> getOrderByValue (double minValue, double maxValue) {
+        return orderList
                 .stream()
                 .filter(order-> Order.getValue() <= minValue)
                 .filter(order -> Order.getValue() >= maxValue)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toList());
 
     }
 
     public int getSize(){
-        return orderSet.size();
+
+      return orderList.size();
     }
 
     public double getSumOfAllOrder(){
         double sumOfOrder = 0;
-        for (Order order : orderSet) {
+        for (Order order : orderList) {
             sumOfOrder += Order.getValue();
             }
         return sumOfOrder;

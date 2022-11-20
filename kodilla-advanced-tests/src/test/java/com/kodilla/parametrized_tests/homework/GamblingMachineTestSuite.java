@@ -12,5 +12,6 @@ public class GamblingMachineTestSuite {
     public void shouldReturnIfNumbersAreCorrect(String numbers) throws InvalidNumbersException{
 
 
+
     }
 }

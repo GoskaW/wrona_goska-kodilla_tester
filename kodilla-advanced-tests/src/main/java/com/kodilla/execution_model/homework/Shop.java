@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Shop {
 
-  static Set<Order> orderSet = new HashSet<>();
+  public Set<Order> orderSet = new HashSet<>();
 
     public void addOrder(Order order){
 

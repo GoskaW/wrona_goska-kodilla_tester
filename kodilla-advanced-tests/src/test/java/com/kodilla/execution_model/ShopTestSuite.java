@@ -30,10 +30,9 @@ public class ShopTestSuite {
     }
     @Test
     public void shouldReturnValueOfOrder() {
-            Order result = shop.getOrder(2);
+            double result = order1.getValue();
 
-            assertEquals(250, order2.getValue());
-
+            assertEquals(350, order1.getValue());
            }
            @Test
            public void shouldReturnDateOfOrder(){
@@ -55,7 +54,7 @@ public class ShopTestSuite {
            }
 
            @Test
-           public void shouldReturnOrderFindByLogin() {
+           public void checkLogin() {
                String login = order1.getLogin();
 
                assertTrue(login.matches("nn222"));

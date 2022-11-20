@@ -56,8 +56,10 @@ public class ShopTestSuite {
            @Test
            public void checkLogin() {
                String login = order1.getLogin();
+               String login2 = order2.getLogin();
 
                assertTrue(login.contains("nn222"));
+               assertTrue(login2.contains("dwse3"));
 
 
                                                                                 // wahałam się pomiędzy String indexOf a String contains,

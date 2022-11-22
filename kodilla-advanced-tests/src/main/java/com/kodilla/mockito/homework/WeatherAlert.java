@@ -1,11 +1,12 @@
 package com.kodilla.mockito.homework;
 
+import javax.xml.stream.Location;
 import java.util.HashMap;
 import java.util.Set;
 
 public class WeatherAlert {
 
-   private HashMap<User, Set<Location>> userLocation = new HashMap<User, Set<Location>>();
+   private HashMap<Location, Set<User>> locationUser = new HashMap<>();
 
 
 }

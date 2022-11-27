@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class GamblingMachineTestSuite {
 
@@ -14,14 +14,14 @@ public class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/correctNumbers.csv", numLinesToSkip = 1)
-    public void shouldReturnIfNumbersAreCorrect(String excepted) throws InvalidNumbersException{
+    public void shouldReturnIfNumbersAreCorrect(int a, int b, int c, int d, int e, int f) throws InvalidNumbersException{
         Set<Integer> correctNumbers = new HashSet<>();
-        int result = gamblingMachine.howManyWins(correctNumbers);
-        assertEquals(excepted,result);
-
-
-
-
-
+        correctNumbers.add(a);
+        correctNumbers.add(b);
+        correctNumbers.add(c);
+        correctNumbers.add(d);
+        correctNumbers.add(e);
+        correctNumbers.add(f);
+        assertThrows(InvalidNumbersException.class, ()->gamblingMachine.howManyWins(correctNumbers));
     }
 }

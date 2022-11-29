@@ -1,7 +1,9 @@
-input,expected
+input.expected
 1,1
 13,13
 27,27
 44,44
 34,34
 22,22
+
+

@@ -22,6 +22,7 @@ public class GamblingMachineTestSuite {
         correctNumbers.add(d);
         correctNumbers.add(e);
         correctNumbers.add(f);
+        int result = gamblingMachine.howManyWins(correctNumbers);
         assertThrows(InvalidNumbersException.class, () -> gamblingMachine.howManyWins(correctNumbers));
     }
 

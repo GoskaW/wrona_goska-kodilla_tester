@@ -58,42 +58,42 @@ public class BankTestSuite {
         slawkowska.add(-150);
 
         assertEquals(600, bank.getAllSumOfPayment());
-        }
+    }
 
-        @Test
+    @Test
     public void shouldCheckAllPaymentAverage(){
-            Bank bank = new Bank();
-            CashMachine lubicz = new CashMachine();
-            CashMachine rynek = new CashMachine();
-            CashMachine slawkowska = new CashMachine();
-            bank.add(lubicz);
-            bank.add(rynek);
-            bank.add(slawkowska);
+        Bank bank = new Bank();
+        CashMachine lubicz = new CashMachine();
+        CashMachine rynek = new CashMachine();
+        CashMachine slawkowska = new CashMachine();
+        bank.add(lubicz);
+        bank.add(rynek);
+        bank.add(slawkowska);
 
-            lubicz.add(350);
-            rynek.add(250);
-            slawkowska.add(-150);
+        lubicz.add(350);
+        rynek.add(250);
+        slawkowska.add(-150);
 
-            assertEquals(300,bank.getAllPaymentAverage());
-        }
+        assertEquals(300,bank.getAllPaymentAverage());
+    }
 
-        @Test
+    @Test
     public void shouldCheckAllWithdwarlAverage(){
-            Bank bank = new Bank();
-            CashMachine lubicz = new CashMachine();
-            CashMachine rynek = new CashMachine();
-            CashMachine slawkowska = new CashMachine();
-            bank.add(lubicz);
-            bank.add(rynek);
-            bank.add(slawkowska);
+        Bank bank = new Bank();
+        CashMachine lubicz = new CashMachine();
+        CashMachine rynek = new CashMachine();
+        CashMachine slawkowska = new CashMachine();
+        bank.add(lubicz);
+        bank.add(rynek);
+        bank.add(slawkowska);
 
-            lubicz.add(350);
-            rynek.add(250);
-            slawkowska.add(-150);
+        lubicz.add(350);
+        rynek.add(250);
+        slawkowska.add(-150);
 
-            assertEquals(-150, bank.getAllWithdwarlAverage());
+        assertEquals(-150, bank.getAllWithdwarlAverage());
 
-        }
+    }
 
 
 }

@@ -57,7 +57,7 @@ class CashMachineTestSuite {
 
         int[] transactions = cashMachine.getTransactions();
         assertEquals(2,cashMachine.getAmountOfWithdrawals());
-            }
+    }
 
     @Test
     public void sholudCheckSumOfPayment() {

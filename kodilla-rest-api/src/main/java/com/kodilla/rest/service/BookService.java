@@ -1,5 +1,6 @@
-package com.kodilla.rest.controller;
+package com.kodilla.rest.service;
 
+import com.kodilla.rest.domain.BookDto;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

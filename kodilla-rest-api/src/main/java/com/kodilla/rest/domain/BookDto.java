@@ -1,7 +1,8 @@
 package com.kodilla.rest.domain;
 
 import java.util.Objects;
-   /*Dto klasa służąca do wymiany danych ze światem zewnętrznym względem naszej aplikacji.*/
+
+/*Dto klasa służąca do wymiany danych ze światem zewnętrznym względem naszej aplikacji.*/
 public class BookDto {
     private String title;
     private String author;

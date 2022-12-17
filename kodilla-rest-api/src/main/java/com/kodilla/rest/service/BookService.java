@@ -12,14 +12,17 @@ public class BookService {
     private List<BookDto> books = new ArrayList<>();
 
     public List<BookDto> getBooks() {
+
         return books;
     }
 
     public void addBook(BookDto bookDto) {
+
         books.add(bookDto);
     }
 
     public void removeBook(BookDto bookDto){
+
         books.remove(bookDto);
     }
 

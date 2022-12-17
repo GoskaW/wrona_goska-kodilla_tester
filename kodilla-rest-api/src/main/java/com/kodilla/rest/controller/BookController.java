@@ -19,11 +19,13 @@ class BookController {
 
     @GetMapping
     public List<BookDto> getBooks() {
+
         return bookService.getBooks();
     }
 
     @PostMapping                                         // [1]
     public void addBook(@RequestBody BookDto bookDto) {  // [2]
+
         bookService.addBook(bookDto);
     }
 

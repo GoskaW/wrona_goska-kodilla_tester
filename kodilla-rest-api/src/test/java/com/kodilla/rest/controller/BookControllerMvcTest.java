@@ -32,4 +32,9 @@ public class BookControllerMvcTest {
         booksList.add(new BookDto("title 2", "author 2"));
         Mockito.when(bookService.getBooks()).thenReturn(booksList);
     }
+
+    @Test
+    public void shouldAddBook() throws Exception {
+
+    }
 }

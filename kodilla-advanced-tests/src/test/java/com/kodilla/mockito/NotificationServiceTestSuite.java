@@ -62,4 +62,5 @@ public class NotificationServiceTestSuite {
             notificationService.addSubscriber(currentClient);
         }
     }
-}
+    }
+

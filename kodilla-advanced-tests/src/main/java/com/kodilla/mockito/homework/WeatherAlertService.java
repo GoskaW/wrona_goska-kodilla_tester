@@ -8,18 +8,22 @@ import java.util.Set;
 
 public class WeatherAlertService {
 
-   private Map<Location, Set<User>> locationSetMap = new HashMap<>();
+   private Map<String, Set<User>> locationSetMap = new HashMap<>();
 
-   public void addUserToLocation(Location location, User user) {
+   public void addUserToLocation(String location, User user) {
       Set<User> userSet = locationSetMap.getOrDefault(location, new HashSet<>());
       userSet.add(user);
       locationSetMap.put(location, userSet);
 
    }
 
-   public void removeUserFromLocation(Location location) {
+   public void deleteLocation(String location) {
       locationSetMap.remove(location);
 
+      }
+
+      public void removeUserFromLocation(String location, User user) {
+         locationSetMap.getOrDefault(location, new HashSet<>()).remove(user);
       }
 
       public void removeAllUserSubscription(User user) {
@@ -27,7 +31,7 @@ public class WeatherAlertService {
 
       }
 
-      public void sendAlertToLocation(Location location, Alert alert) {
+      public void sendAlertToLocation(String location, Alert alert) {
       locationSetMap.getOrDefault(location, new HashSet<>())
               .stream()
               .forEach(user -> user.receive(alert));
@@ -35,7 +39,7 @@ public class WeatherAlertService {
 
       }
 
-      public void SendToAllUsers(Alert alert) {
+      public void sendToAllUsers(Alert alert) {
       this.locationSetMap.forEach((location, users) -> users.forEach(user -> user.receive(alert)));
       }
 

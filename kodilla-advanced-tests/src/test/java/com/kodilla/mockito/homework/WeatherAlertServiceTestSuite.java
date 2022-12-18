@@ -10,16 +10,14 @@ class WeatherAlertServiceTestSuite {
     User user1 = Mockito.mock(User.class);
     User user2 = Mockito.mock(User.class);
     Alert alert = Mockito.mock(Alert.class);
-    Location location = Mockito.mock(Location.class);
-    Location location1 = Mockito.mock(Location.class);
 
 
     @Test
     void userInGivenLocalizationShouldGivenAlert() {
-        weatherAlertService.addUserToLocation(location, user);
-        weatherAlertService.addUserToLocation(location, user1);
+        weatherAlertService.addUserToLocation("location", user);
+        weatherAlertService.addUserToLocation("location", user1);
 
-        weatherAlertService.sendAlertToLocation(location,alert);
+        weatherAlertService.sendAlertToLocation("location",alert);
 
         Mockito.verify(user, Mockito.times(1)).receive(alert);
 
@@ -28,11 +26,11 @@ class WeatherAlertServiceTestSuite {
 
     @Test
     void userShouldntGetAlertInGivenLocation() {
-        weatherAlertService.addUserToLocation(location, user);
-        weatherAlertService.addUserToLocation(location1, user2);
+        weatherAlertService.addUserToLocation("location", user);
+        weatherAlertService.addUserToLocation("location1", user2);
 
-        weatherAlertService.removeUserFromLocation(location);
-        weatherAlertService.SendToAllUsers(alert);
+        weatherAlertService.removeUserFromLocation("location", user);
+        weatherAlertService.sendToAllUsers(alert);
 
         Mockito.verify(user, Mockito.never()).receive(alert);
         Mockito.verify(user2, Mockito.times(1)).receive(alert);
@@ -40,14 +38,24 @@ class WeatherAlertServiceTestSuite {
     }
     @Test
     void unsubscribedUserShouldntGivenAlerts() {
-        weatherAlertService.addUserToLocation(location,user);
-        weatherAlertService.addUserToLocation(location1,user1);
+        weatherAlertService.addUserToLocation("location",user);
+        weatherAlertService.addUserToLocation("location1",user1);
 
         weatherAlertService.removeAllUserSubscription(user);
-        weatherAlertService.SendToAllUsers(alert);
+        weatherAlertService.sendToAllUsers(alert);
 
         Mockito.verify(user, Mockito.never()).receive(alert);
 
+    }
+
+    @Test
+     void shouldDeleteLocation(){
+        weatherAlertService.addUserToLocation("location", user);
+        weatherAlertService.addUserToLocation("location2", user);
+
+        weatherAlertService.deleteLocation("location");
+
+        Mockito.verify(user, Mockito.never()).receive(alert);
     }
 
 }

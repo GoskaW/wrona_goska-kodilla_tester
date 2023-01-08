@@ -16,6 +16,7 @@ public class KodillaLoginPomTest {
 
     @BeforeEach
     public void setup() {
+        System.setProperty("webdriver.chrome.driver", "C:\\selenium-drivers\\Chrome\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.navigate().to("https://kodilla.com/pl/test/login");
         loginPom = new KodillaLoginPom(driver);

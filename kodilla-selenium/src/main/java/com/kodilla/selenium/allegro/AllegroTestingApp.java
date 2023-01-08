@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class AllegroTestingApp {
 
 
@@ -17,13 +19,21 @@ public class AllegroTestingApp {
         WebElement consent = driver.findElement(By.xpath("//*[@id=\"opbox-gdpr-consents-modal\"]/div/div[2]/div/div[2]"));
         consent.click();
 
-        WebElement category = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div/div/div[2]/header/div/div/div/div/form/div[3]/div/select"));
+        WebElement category = driver.findElement(By.cssSelector("select.mr3m_1"));
         Select subcategory = new Select(category);
         subcategory.selectByIndex(3);
 
-        WebElement product = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div/div/div/div[2]/header/div/div/div/div/form/input"));
+        WebElement product = driver.findElement(By.cssSelector("input.msts_pt"));
         product.sendKeys("Mavic mini");
         product.submit();
 
+
+        List<WebElement> element = driver.findElements(By.cssSelector("section>article"));
+        for (WebElement article: element) {
+            System.out.println(article.getText());
+        }
+
+
          }
+
 }
